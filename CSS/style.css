@@ -1,35 +1,76 @@
 *{
     font-family: "Roboto", sans-serif;
-    border-style: border-box;
 }
 
 nav > *{
-    display: inline-block;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-li{
-    display: inline;
+.logo > img{
+    width: 93px;
+    height: 40px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover{
+    text-decoration: underline;
+    background-color: yellow;
 }
 
 .menu{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1;
+    overflow-x: hidden;
+    top: 0;
+    width: 100%;
 }
 
 .profile-card {
-    width: 50%;
+    width: 30%;
     border: 0.2rem solid black;
     border-radius: 0.5rem;
+    box-shadow: 10px 5px 5px black;
+    float: right;
+    margin: 1em;
 }
 
 .profile-card img{
-    width: 15%;
-    height: 15%;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
-    box-shadow: .1em;
+    
 }
 
 .profile-card > *{
     margin: 1em;
+}
+
+@media only screen and (max-width: 800px){
+    nav{
+        display: block;
+        position: relative;
+    }
+
+    .menu{
+        position: relative;
+        display: block;
+        top: 1em;
+        left: 0;
+        z-index: 1;
+    }
+
+    .profile-card{
+        float: none;
+        width: fit-content;
+    }
 }
