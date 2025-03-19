@@ -8,16 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="./CSS/output.css" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <div class="logo"><a href="#"><img src="./Images/télécharger.jpg" alt="KHZ" /></a></div>
+        <div id="logo" class="logo"><img src="./Images/télécharger.jpg" alt="KHZ" /></div>
+
         <ul class="menu">
             <li><a href="#">Accueil</a></li>
             <li><a href="#">À propos</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+
+        <ul id="menu" class="menu-mobile">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <script src="./JS/index.js"></script>
     </nav>
     
     <section class="welcome-head">
@@ -28,6 +38,11 @@
             <p class="description">Depuis plusieurs années, je me suis mit dans l'informatique pour avancer sur ce domaine et devenir développeur. Après cette mésaventure, je me suis mit dans les systèmes et réseaux qui m'intéressaient plus.</p>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vulputate sollicitudin tellus quis auctor. Suspendisse sed tincidunt nunc. Praesent mattis iaculis purus, id tristique eros vehicula sit amet. Cras lobortis volutpat magna nec efficitur. Mauris blandit quam a eleifend sollicitudin. In felis orci, luctus nec ante lacinia, placerat lobortis neque. Pellentesque sodales lacus a blandit ornare. Nunc id tempor est. Nulla mattis, orci quis suscipit molestie, sem felis aliquam sapien, et pellentesque purus ligula in enim. Mauris non arcu sapien. <br> <br>Nullam quis interdum sapien. Aenean interdum tortor vel elit mollis elementum. Curabitur eget odio euismod, malesuada eros ut, ultrices lectus. In eleifend ante feugiat, eleifend magna a, iaculis massa. Quisque consequat ipsum ac nibh vehicula pellentesque. Praesent vulputate risus quis velit posuere euismod. Pellentesque nec finibus est. Fusce iaculis, augue nec placerat suscipit, justo eros efficitur magna, et condimentum diam turpis vitae nibh. Phasellus porttitor, leo a dapibus egestas, quam ex maximus justo, ac laoreet.</p>
+
+    </section>
+
+    <section id="pokemon-card" class="pokemon-card">
+        <script src="./JS/pokemon.js"></script>
     </section>
     
 

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 *{
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
@@ -10,7 +12,7 @@ nav{
     flex-direction: row;
 }
 
-nav > *{
+nav  *{
     background-color: pink;
 }
 
@@ -20,15 +22,13 @@ nav > *{
     position: fixed;
 }
 
-.menu a{
+a{
     text-decoration: none;
     color: black;
 }
 
-.menu a:hover{
+a:hover{
     text-decoration: underline;
-    background-color: yellow;
-    font-weight: bolder;
 }
 
 .menu{
@@ -42,6 +42,23 @@ nav > *{
     position:fixed;
     top: 0;
     height: 40px;
+}
+
+.menu-mobile{
+    display: none;
+    flex-direction: column;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding-left: .5em;
+    align-items: flex-start;
+    position: fixed;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.menu-mobile li{
+    padding: 0.5em 0 0.5em 0;
 }
 
 .profile-card{
@@ -77,11 +94,11 @@ nav > *{
 
 @media screen and (max-width: 1000px){
     .profile-card{
-        min-width: 50%;
+        min-width: 40%;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 800px){
     .profile-card{
         width: fit-content;
     }
@@ -92,30 +109,12 @@ nav > *{
 }
 
 @media screen and (max-width: 470px){
-    nav{
-        flex-direction: column;
-    }
 
-    .logo img{
-        position: relative;
-    }
-    
     .menu{
-        flex-direction: column;
-        top: 0;
-        z-index: 1;
-        margin: 0;
-        padding-left: .5em;
-        height: auto;
-        align-items: flex-start;
-        position: relative;
-    }
-
-    li{
-        padding: 1em 0 1em 0;
+        visibility: hidden;
     }
 
     .welcome-head{
-        margin-top: 0;
+        margin-top: 2em;
     }
 }
