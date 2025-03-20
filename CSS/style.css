@@ -1,4 +1,8 @@
-@import "tailwindcss";
+/* tailwind is imported but not used @import "tailwindcss"; */
+
+html{
+    scroll-padding-top: 40px;
+}
 
 *{
     font-family: "Roboto", sans-serif;
@@ -7,7 +11,19 @@
     padding: 0;
 }
 
+button{
+    background-color: pink;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 0.1rem solid black;
+}
+
+li{
+    list-style-type: none;
+}
+
 nav{
+    z-index: 1;
     display: flex;
     flex-direction: row;
 }
@@ -15,7 +31,6 @@ nav{
 nav  *{
     background-color: pink;
 }
-
 
 .logo  img{
     height: 40px;
@@ -31,8 +46,8 @@ a:hover{
     text-decoration: underline;
 }
 
+
 .menu{
-    list-style-type: none;
     margin: 0 0 0 40px;
     padding: 0;
     display: flex;
@@ -61,36 +76,36 @@ a:hover{
     padding: 0.5em 0 0.5em 0;
 }
 
-.profile-card{
-    border: 0.2rem solid black;
-    border-radius: 0.5rem;
-    box-shadow: 10px 5px 5px black;
-    margin: 1em;
-    background-image: linear-gradient(to right, #ffe6e6, #ffe6ff);
-    min-width: 30%;
+body {
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.profile-card img{
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-}
-
-.profile-card > *{
-    margin: 1em;
+main{
+    margin: 40px 1em 1em 1em;
 }
 
 
-.welcome-head{
+footer{
+    background-color: pink;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: 3em;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    margin-top: auto;
 }
 
-.welcome-head p{
-    margin: 1em;
+footer a{
+    display: inline-flex;
 }
 
+footer img{
+    width: 40px;
+    height: auto;
+}
 
 @media screen and (max-width: 1000px){
     .profile-card{
@@ -102,19 +117,21 @@ a:hover{
     .profile-card{
         width: fit-content;
     }
+}
 
-    .welcome-head{
+@media screen and (max-width: 800px){
+    footer{
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .copyright{
+        order: 1;
     }
 }
 
 @media screen and (max-width: 470px){
-
     .menu{
         visibility: hidden;
-    }
-
-    .welcome-head{
-        margin-top: 2em;
     }
 }

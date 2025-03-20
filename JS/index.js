@@ -37,7 +37,7 @@ logo.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-    if (!menu.style.display !== 'none' && !logo.contains(event.target) && !menu.contains(event.target)) {
+    if (!menu.style.display !== 'none' && !logo.contains(event.target)) {
         closing();
     }
 });
