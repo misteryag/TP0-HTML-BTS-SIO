@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéAPI</title>
     <link rel="stylesheet" href="./CSS/style.css"/>
+    <link rel="stylesheet" href="./CSS/pokeapi.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- tailwind is imported but not used <link href="./CSS/output.css" rel="stylesheet"> --->
+    <!-- tailwind is imported but not used <link href="./CSS/output.css" rel="stylesheet"> -->
 </head>
 <body>
     <nav>
@@ -17,20 +18,25 @@
         <ul class="menu">
             <li><a href="./index.html#">Accueil</a></li>
             <li><a href="./index.html#cv">À propos</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
         </ul>
 
         <ul id="menu" class="menu-mobile">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="./index.html/#cv">À propos</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./index.html#">Accueil</a></li>
+            <li><a href="./index.html#cv">À propos</a></li>
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
         </ul>
         <script src="./JS/index.js"></script>
     </nav>
 
     <main>
+        <section class="miniform">
+            <input type="text" id="text">
+            <button id="search">Search Pokemon</button>
+        </section>
+
         <section id="pokemon-card" class="pokemon-card">
             <script src="./JS/pokemon.js"></script>
         </section>
@@ -42,24 +48,24 @@
 
         <ul>
             <h3>Liens</h3>
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="./index.html">À propos</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./index.html#">Accueil</a></li>
+            <li><a href="./index.html#cv">À propos</a></li>
+            <li><a href="./index.html#services">Services</a></li>
+            <li><a href="./index.html#contact">Contact</a></li>
         </ul>
 
-        <span>
+        <div>
             <h3>Réseaux</h3>
             <a href="http://instagram.com/misteryaguwu" target="_blank"><img src="./Images/instagram.png" alt="insta"/></a>
             <a href="http://twitter.com/misteryaguwu" target="_blank"><img src="./Images/twitter.png" alt="x"/></a>
             <a href="https://www.youtube.com/@mryag3391" target="_blank"><img src="./Images/youtube.png" alt="ytb"/></a>
-        </span>
+        </div>
 
-        <span>
+        <div>
             <h3>Contacts</h3>
             <p>Thierry AING</p>
             <p>aingthierry@gmail.com</p>
-        </span>
+        </div>
     </footer>
 
 </body>

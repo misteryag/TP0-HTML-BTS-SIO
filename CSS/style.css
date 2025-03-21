@@ -1,7 +1,8 @@
 /* tailwind is imported but not used @import "tailwindcss"; */
 
+/* Because the navbar can take over the content, we use this methodd to prevent this issue*/
 html{
-    scroll-padding-top: 40px;
+    scroll-padding-top: 50px;
 }
 
 *{
@@ -77,13 +78,13 @@ a:hover{
 }
 
 body {
-    min-width: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 main{
-    margin: 40px 1em 1em 1em;
+    margin: 50px 1em 1em 1em;
 }
 
 
@@ -107,11 +108,6 @@ footer img{
     height: auto;
 }
 
-@media screen and (max-width: 1000px){
-    .profile-card{
-        min-width: 40%;
-    }
-}
 
 @media screen and (max-width: 800px){
     .profile-card{

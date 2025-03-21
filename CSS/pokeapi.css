@@ -1,0 +1,31 @@
+.pokemon-card{
+    margin-top: 1em;
+}
+
+.pc-body{
+    background-color: rgb(255, 79, 79);
+    padding: 1em;
+    border-radius: 12px;
+    width: fit-content;
+}
+
+.pc-id{
+    float: right;
+    background-color: white;
+    padding: 1.5%;
+    border-radius: 12px;
+}
+
+.pc-img img{
+    height: 300px;
+}
+
+.pc-t{
+    display: flex;
+    flex-direction: column;
+}
+
+.pc-a{
+    display: flex;
+    flex-direction: column;
+}

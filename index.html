@@ -6,6 +6,7 @@
     <title>Mon premier site</title>
     <link rel="stylesheet" href="./CSS/style.css"/>
     <link rel="stylesheet" href="./CSS/index.css"/>
+    <!--This rel is used to import font from google-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -26,7 +27,7 @@
             <li><a href="#">Accueil</a></li>
             <li><a href="#cv">À propos</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <script src="./JS/index.js"></script>
     </nav>
@@ -47,7 +48,7 @@
         <h1 id="cv">À propos</h1>
         <section  class="cv">
 
-            <button><a href="./Images/cv-Thierry-AING.pdf" target="_blank">Télécharger le CV</a></button>
+            <a href="./Images/resume.pdf" target="_blank"><button>Télécharger le CV</button></a>
             <div class="iframe">
                 <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
                 padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
@@ -61,33 +62,36 @@
 
         <h1 id="services">Services</h1>
         <section  class="services">
-            <span>
+            <div class="map">
                 <h3><a href="./pokeapi.html" target="_self">PokéAPI</a></h3>
-                <p>Pokédex permettant de rechercher des informations sur un Pokémon</p>
-            </span>
+                <p>Pokédex permettant de rechercher des informations sur un Pokémon (en anglais!)</p>
+            </div>
 
-            <span>
-                <h3><a href="./pokeapi.html" target="_self">PokéAPI</a></h3>
-                <p>Pokédex permettant de rechercher des informations sur un Pokémon</p>
-            </span>
-
-            <span>
+            <div>
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/13ruYqOv0prtphIJ0Hi84O?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </span>
+            </div>
         </section>
 
         <h1 id="contact">Contact</h1>
         <section class="contact">
-            <form action="https://formspree.io/f/mdkeaqnj" method="POST">
-                <label for="name">Nom :</label>
-                <input name="name" id="name" type="text" placeholder="Votre nom complet" required>
-                <label for="email">Email :</label>
-                <input name="email" id="email" type="email" placeholder="Votre adresse Email" required>
-                <label for="message">Message:</label>
-                <input name="message" id="message" placeholder="Votre message..." required>
-                <button type="submit">Envoyer</button>
-            </form>
+            <div class="map">
+                <h3>Adresse de l'école</h3>
+                <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=26%20Avenue%20Tony%20Garnier,%2069007%20Lyon+(Isitech)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+            </div>
+
+            <div>
+                <form action="https://formspree.io/f/mdkeaqnj" method="POST">
+                    <label for="name">Nom :</label>
+                    <input name="name" id="name" type="text" placeholder="Votre nom complet" required>
+                    <label for="email">Email :</label>
+                    <input name="email" id="email" type="email" placeholder="Votre adresse Email" required>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Votre message..." required="true"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
         </section>
+        
     </main>
     
     <footer>
@@ -98,21 +102,21 @@
             <li><a href="#">Accueil</a></li>
             <li><a href="#cv">À propos</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <span>
+        <div>
             <h3>Réseaux</h3>
             <a href="http://instagram.com/misteryaguwu" target="_blank"><img src="./Images/instagram.png" alt="insta"/></a>
             <a href="http://twitter.com/misteryaguwu" target="_blank"><img src="./Images/twitter.png" alt="x"/></a>
             <a href="https://www.youtube.com/@mryag3391" target="_blank"><img src="./Images/youtube.png" alt="ytb"/></a>
-        </span>
+        </div>
 
-        <span>
+        <div>
             <h3>Contact</h3>
             <p>Lorem Ipsum</p>
             <p>loremipsum@gmail.com</p>
-        </span>
+        </div>
     </footer>
 
 </body>

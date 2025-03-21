@@ -1,8 +1,16 @@
-const apiUrl = "https://pokeapi.co/api/v2/pokemon/bellsprout";
+const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
+const card = document.getElementById("pokemon-card");
 
-async function fetchPokemonData() {
+const button = document.getElementById("search");
+
+button.addEventListener("click", () => {
+    const userInput = document.getElementById("text").value;
+    fetchPokemonData(userInput);
+});
+
+async function fetchPokemonData(userInput) {
     try{
-        const response = await fetch(apiUrl);
+        const response = await fetch(apiUrl+userInput);
 
         if (!response.ok){
             throw new Error(`Erreur HTTPS: ${response.status}`);
@@ -15,14 +23,12 @@ async function fetchPokemonData() {
         /* console.log(pokemonData); */
     }catch (error) {
         console.error('Erreur lors de la récupération:', error);
+        card.innerHTML =
+        `<p class="error">Erreur lors de la récupération:', ${error}</p>`;
     }
 }
 
-fetchPokemonData();
-
 function displayPokemon(pokemon){
-    const card = document.getElementById("pokemon-card");
-
     console.log(pokemon.name);
 
     card.innerHTML = 
@@ -35,21 +41,23 @@ function displayPokemon(pokemon){
             <img src="${pokemon.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}"/>
         </div>
 
-        <div>
+        <div class="pc-t">
+            <h5>Type(s):</h5>
             ${pokemon.types.map(t => 
                 `<span>${t.type.name}</span>`
-            ).join('')}
+            ).join(' ')}
         </div>
 
         <div>
-            <span>Taille / Poids</span>
+            <h5>Height / Weight</h5>
             <p>${pokemon.height / 10} M / ${pokemon.weight / 10} KG</p>
         </div>
 
-        <div>
+        <div class="pc-a">
+            <h5>Abilities:</h5>
             ${pokemon.abilities.map(a => 
                 `<span>${a.ability.name}</span>`
-            ).join('')}
+            ).join(' ')}
         </div>
     </div>
     `;

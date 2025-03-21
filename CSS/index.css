@@ -44,10 +44,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.services span{
+.services div{
     left: 0;
     width: 30%;
     height: fit-content;
@@ -59,10 +59,14 @@
 }
 
 .contact{
-    background-image: linear-gradient(to right, #ffe6e6, #ffe6ff);
     width: 50%;
+    background-image: linear-gradient(to right, #ffe6e6, #ffe6ff);
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
+
 
 .contact button{
     margin-top: 1em;
@@ -72,16 +76,14 @@
     padding: 1em;
 }
 
-.contact *{
-    min-width: 100%;
-    max-width: 100%;
+.contact form{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
 #message{
-    height: 250px;
+    min-height: 250px;
+    max-height: 400px;
 }
 
 @media screen and (max-width: 1000px){
@@ -89,14 +91,19 @@
         min-width: 40%;
     }
 
-    .services span{
+    .services div{
         width: 50%;
+    }
+
+    .contact{
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 800px){
     .welcome-head{
         flex-direction: column;
+        width: fit-content;
     }
 
     .cv{
@@ -106,7 +113,11 @@
     .services{
         flex-direction: column;
     }
-    .services span{
+    .services div{
+        width: fit-content;
+    }
+
+    .contact{
         width: 100%;
     }
 }
